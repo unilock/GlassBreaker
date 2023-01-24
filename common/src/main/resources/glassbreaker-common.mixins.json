@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "package": "net.unilock.glassbreaker.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "client": [
+  ],
+  "mixins": [
+    "MixinMiningToolItem"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
