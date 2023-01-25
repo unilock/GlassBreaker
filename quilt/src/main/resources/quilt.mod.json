@@ -7,14 +7,18 @@
     "group": "${group}",
     "id": "glassbreaker",
     "version": "${version}",
-    "name": "${name}",
-    "description": "${description}",
-    "authors": ["${author}"],
-    "contact": {
-      "sources": "${sources}"
+    "metadata": {
+      "name": "${name}",
+      "description": "${description}",
+      "contributors": {
+        "${author}": "made the thing"
+      },
+      "contact": {
+        "sources": "${sources}"
+      },
+      "license": "MIT",
+      "icon": "assets/glassbreaker/icon.png"
     },
-    "license": "MIT",
-    "icon": "assets/glassbreaker/icon.png",
     "intermediate_mappings": "net.fabricmc:intermediary",
     "environment": "*",
     "entrypoints": {

@@ -34,12 +34,14 @@ processResources {
     inputs.property "name", rootProject.mod_name
     inputs.property "description", rootProject.mod_description
     inputs.property "author", rootProject.mod_author
+    inputs.property "sources", rootProject.mod_sources
 
     filesMatching("META-INF/mods.toml") {
         expand "version": project.version,
                 "name": rootProject.mod_name,
                 "description": rootProject.mod_description,
-                "author": rootProject.mod_author
+                "author": rootProject.mod_author,
+                "sources": rootProject.mod_sources
     }
 }
 

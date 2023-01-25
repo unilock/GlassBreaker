@@ -7,11 +7,12 @@ license = "MIT"
 modId = "glassbreaker"
 version = "${version}"
 displayName = "${name}"
+displayURL = "${sources}"
 authors = "${author}"
 description = '''
 ${description}
 '''
-#logoFile = ""
+logoFile = "assets/glassbreaker/icon.png"
 
 [[dependencies.glassbreaker]]
 modId = "forge"
