@@ -19,7 +19,6 @@ public class MixinMiningToolItem {
 
     @Inject(at = @At("HEAD"), method = "getMiningSpeedMultiplier(Lnet/minecraft/item/ItemStack;Lnet/minecraft/block/BlockState;)F", cancellable = true)
     private void miningSpeedGlass(ItemStack stack, BlockState state, CallbackInfoReturnable<Float> cir) {
-        System.out.println("Hello from example architectury common mixin!");
         if (state.getMaterial().equals(Material.GLASS)) {
             cir.setReturnValue(this.miningSpeed);
         }
