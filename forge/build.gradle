@@ -8,14 +8,8 @@ architectury {
 }
 
 loom {
-    accessWidenerPath = project(":common").loom.accessWidenerPath
-
     forge {
-        convertAccessWideners = true
-        extraAccessWideners.add loom.accessWidenerPath.get().asFile.name
-
         mixinConfig "glassbreaker-common.mixins.json"
-        mixinConfig "glassbreaker.mixins.json"
     }
 }
 
@@ -37,8 +31,15 @@ dependencies {
 processResources {
     inputs.property "version", project.version
 
+    inputs.property "name", rootProject.mod_name
+    inputs.property "description", rootProject.mod_description
+    inputs.property "author", rootProject.mod_author
+
     filesMatching("META-INF/mods.toml") {
-        expand "version": project.version
+        expand "version": project.version,
+                "name": rootProject.mod_name,
+                "description": rootProject.mod_description,
+                "author": rootProject.mod_author
     }
 }
 

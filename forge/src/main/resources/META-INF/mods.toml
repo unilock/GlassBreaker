@@ -1,15 +1,15 @@
 modLoader = "javafml"
 loaderVersion = "[40,)"
 #issueTrackerURL = ""
-license = "Insert License Here"
+license = "MIT"
 
 [[mods]]
 modId = "glassbreaker"
 version = "${version}"
-displayName = "Example Mod"
-authors = "Me!"
+displayName = "${name}"
+authors = "${author}"
 description = '''
-This is an example description! Tell everyone what your mod is about!
+${description}
 '''
 #logoFile = ""
 

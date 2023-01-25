@@ -12,7 +12,6 @@ architectury {
 }
 
 loom {
-    accessWidenerPath = project(":common").loom.accessWidenerPath
 }
 
 configurations {
@@ -37,9 +36,18 @@ processResources {
     inputs.property "group", rootProject.maven_group
     inputs.property "version", project.version
 
+    inputs.property "name", rootProject.mod_name
+    inputs.property "description", rootProject.mod_description
+    inputs.property "author", rootProject.mod_author
+    inputs.property "sources", rootProject.mod_sources
+
     filesMatching("quilt.mod.json") {
         expand "group": rootProject.maven_group,
-                "version": project.version
+                "version": project.version,
+                "name": rootProject.mod_name,
+                "description": rootProject.mod_description,
+                "author": rootProject.mod_author,
+                "sources": rootProject.mod_sources
     }
 }
 
@@ -51,7 +59,6 @@ shadowJar {
 }
 
 remapJar {
-    injectAccessWidener = true
     input.set shadowJar.archiveFile
     dependsOn shadowJar
     classifier null

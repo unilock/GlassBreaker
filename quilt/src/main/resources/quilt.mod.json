@@ -1,20 +1,19 @@
 {
   "schema_version": 1,
   "mixin": [
-    "glassbreaker.mixins.json",
     "glassbreaker-common.mixins.json"
   ],
   "quilt_loader": {
     "group": "${group}",
     "id": "glassbreaker",
     "version": "${version}",
-    "name": "Example Mod",
-    "description": "This is an example description! Tell everyone what your mod is about!",
-    "authors": ["Me!"],
+    "name": "${name}",
+    "description": "${description}",
+    "authors": ["${author}"],
     "contact": {
-      "sources": "https://github.com/architectury/architectury-templates"
+      "sources": "${sources}"
     },
-    "license": "Insert License Here",
+    "license": "MIT",
     "icon": "assets/glassbreaker/icon.png",
     "intermediate_mappings": "net.fabricmc:intermediary",
     "environment": "*",
