@@ -11,7 +11,7 @@
     "sources": "${sources}"
   },
   "license": "MIT",
-  "icon": "assets/glassbreaker/icon.png",
+  "icon": "icon.png",
   "environment": "*",
   "entrypoints": {
     "main": [
