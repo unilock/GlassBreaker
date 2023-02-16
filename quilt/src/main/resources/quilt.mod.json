@@ -17,7 +17,7 @@
         "sources": "${sources}"
       },
       "license": "MIT",
-      "icon": "assets/glassbreaker/icon.png"
+      "icon": "icon.png"
     },
     "intermediate_mappings": "net.fabricmc:intermediary",
     "environment": "*",

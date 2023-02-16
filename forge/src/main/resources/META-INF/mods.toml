@@ -12,7 +12,7 @@ authors = "${author}"
 description = '''
 ${description}
 '''
-logoFile = "assets/glassbreaker/icon.png"
+logoFile = "icon.png"
 
 [[dependencies.glassbreaker]]
 modId = "forge"
