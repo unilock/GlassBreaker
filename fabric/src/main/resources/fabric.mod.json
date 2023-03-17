@@ -22,7 +22,7 @@
     "glassbreaker-common.mixins.json"
   ],
   "depends": {
-    "fabric": "*",
+    "fabricloader": "*",
     "minecraft": ">=1.19.2"
   }
 }
