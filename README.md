@@ -14,7 +14,7 @@ List of what the game considers "glass" blocks:
 - Conduits
 
 Compatible with:
-- Efficiency and Silk Touch.
+- Efficiency, Silk Touch, etc.
 - Any mod that adds pickaxes, including pickaxe-like tools, like [Pickle Tweaks](https://modrinth.com/mod/pickle-tweaks)' paxels.
 - Any mod that adds glass, like [Glassential](https://modrinth.com/mod/glassential)!
 
