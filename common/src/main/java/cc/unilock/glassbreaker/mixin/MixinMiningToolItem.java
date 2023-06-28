@@ -1,4 +1,4 @@
-package net.unilock.glassbreaker.mixin;
+package cc.unilock.glassbreaker.mixin;
 
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Material;

@@ -1,6 +1,7 @@
 {
   "required": true,
-  "package": "net.unilock.glassbreaker.mixin",
+  "minVersion": "0.8",
+  "package": "cc.unilock.glassbreaker.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
     "MixinMiningToolItem"

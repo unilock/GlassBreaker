@@ -1,11 +1,11 @@
-package net.unilock.glassbreaker.fabric;
+package cc.unilock.glassbreaker.fabric;
 
+import cc.unilock.glassbreaker.GlassBreaker;
 import net.fabricmc.api.ModInitializer;
-import net.unilock.glassbreaker.fabriclike.GlassBreakerFabricLike;
 
 public class GlassBreakerFabric implements ModInitializer {
     @Override
     public void onInitialize() {
-        GlassBreakerFabricLike.init();
+        GlassBreaker.init();
     }
 }

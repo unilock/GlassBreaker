@@ -15,7 +15,7 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.unilock.glassbreaker.fabric.GlassBreakerFabric"
+      "cc.unilock.glassbreaker.fabric.GlassBreakerFabric"
     ]
   },
   "mixins": [
