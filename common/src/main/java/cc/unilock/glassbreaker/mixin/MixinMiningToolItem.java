@@ -23,18 +23,18 @@ public class MixinMiningToolItem extends Item {
     protected float miningSpeed;
 
     @Unique
-    private final Class<? extends Item> miningToolItem = this.asItem().getClass();
+    private final Class<? extends Item> glassbreaker$miningToolItem = this.asItem().getClass();
 
     @Inject(method = "getMiningSpeedMultiplier", at = @At("HEAD"), cancellable = true)
     private void glassbreaker$getMiningSpeedMultiplier(ItemStack stack, BlockState state, CallbackInfoReturnable<Float> cir) {
-        if (glassbreaker$isGlass(state) && (miningToolItem.equals(PickaxeItem.class) || miningToolItem.equals(AxeItem.class))) {
+        if (glassbreaker$isGlass(state) && glassbreaker$miningToolItem.equals(PickaxeItem.class)) {
             cir.setReturnValue(this.miningSpeed);
         }
     }
 
     @Inject(method = "isSuitableFor", at = @At("HEAD"), cancellable = true)
     private void glassbreaker$isSuitableFor(BlockState state, CallbackInfoReturnable<Boolean> cir) {
-        if (glassbreaker$isGlass(state) && (miningToolItem.equals(PickaxeItem.class) || miningToolItem.equals(AxeItem.class))) {
+        if (glassbreaker$isGlass(state) && glassbreaker$miningToolItem.equals(PickaxeItem.class)) {
             cir.setReturnValue(true);
         }
     }
