@@ -1,5 +1,6 @@
 package cc.unilock.glassbreaker.mixin;
 
+import cc.unilock.glassbreaker.GlassBreaker;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Material;
 import net.minecraft.item.*;
@@ -38,44 +39,9 @@ public class MixinMiningToolItem extends Item {
         }
     }
 
+    @Unique
     private static boolean glassbreaker$isGlass(BlockState state) {
-        return state.getMaterial().equals(Material.GLASS);
+        return state.getBlock().asItem().getDefaultStack().isIn(GlassBreaker.GLASS_ITEMS)
+                || state.getMaterial().equals(Material.GLASS);
     }
-
-    /*
-     * TODO: optimize this?
-     *  currently, it's likely very wasteful when mining any block that ISN'T glass
-     *  (though i'm not sure how one would fix that)
-     *
-    private static boolean glassbreaker$isGlassByTag(BlockState state) {
-        if (
-            // - fallbacks (loader-agnostic)
-                state.getSoundGroup().equals(BlockSoundGroup.GLASS)
-                || state.getInstrument().equals(Instrument.HAT)
-                // - block tags
-                // common tags
-                || state.isIn(TagKey.of(RegistryKeys.BLOCK, Identifier.of("c", "glass")))
-                || state.isIn(TagKey.of(RegistryKeys.BLOCK, Identifier.of("c", "glass_blocks")))
-                // forge tags
-                || state.isIn(TagKey.of(RegistryKeys.BLOCK, Identifier.of("forge", "glass")))
-                || state.isIn(TagKey.of(RegistryKeys.BLOCK, Identifier.of("forge", "glass_panes")))
-        ) {
-            return true;
-        }
-
-        // the below conditional is separate so we can store the default stack
-        // instead of having to get() it each time
-        ItemStack stateStack = state.getBlock().asItem().getDefaultStack();
-
-        return  // - item tags
-                // common tags
-                stateStack.isIn(TagKey.of(RegistryKeys.ITEM, Identifier.of("c", "glass")))
-                || stateStack.isIn(TagKey.of(RegistryKeys.ITEM, Identifier.of("c", "glass_blocks")))
-                || stateStack.isIn(TagKey.of(RegistryKeys.ITEM, Identifier.of("c", "glass_pane")))
-                || stateStack.isIn(TagKey.of(RegistryKeys.ITEM, Identifier.of("c", "glass_panes")))
-                // forge tags
-                || stateStack.isIn(TagKey.of(RegistryKeys.ITEM, Identifier.of("forge", "glass")))
-                || stateStack.isIn(TagKey.of(RegistryKeys.ITEM, Identifier.of("forge", "glass_panes")));
-    }
-     */
 }
