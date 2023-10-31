@@ -1,27 +1,27 @@
 {
   "values": [
     {
-      "id": "c:glass",
+      "id": "#c:glass",
       "required": false
     },
     {
-      "id": "c:glass_blocks",
+      "id": "#c:glass_blocks",
       "required": false
     },
     {
-      "id": "c:glass_pane",
+      "id": "#c:glass_pane",
       "required": false
     },
     {
-      "id": "c:glass_panes",
+      "id": "#c:glass_panes",
       "required": false
     },
     {
-      "id": "forge:glass",
+      "id": "#forge:glass",
       "required": false
     },
     {
-      "id": "forge:glass_panes",
+      "id": "#forge:glass_panes",
       "required": false
     }
   ]
