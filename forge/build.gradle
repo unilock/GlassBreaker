@@ -26,6 +26,8 @@ dependencies {
 
     common(project(path: ":common", configuration: "namedElements")) { transitive false }
     shadowCommon(project(path: ":common", configuration: "transformProductionForge")) { transitive = false }
+
+    modImplementation "curse.maven:tetra-289712:${rootProject.tetra_id}"
 }
 
 processResources {

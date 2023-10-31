@@ -1,6 +1,7 @@
 package cc.unilock.glassbreaker.mixin;
 
 import cc.unilock.glassbreaker.GlassBreaker;
+import cc.unilock.glassbreaker.ModCompat;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Material;
 import net.minecraft.item.Item;
@@ -29,15 +30,17 @@ public class MixinMiningToolItem extends Item {
     private final Class<? extends Item> glassbreaker$miningToolItem = this.asItem().getClass();
 
     @Inject(method = "getMiningSpeedMultiplier", at = @At("HEAD"), cancellable = true)
-    private void glassbreaker$getMiningSpeedMultiplier(ItemStack stack, BlockState state, CallbackInfoReturnable<Float> cir) {
+    private void getMiningSpeedMultiplier(ItemStack stack, BlockState state, CallbackInfoReturnable<Float> cir) {
         if (glassbreaker$isGlass(state) && glassbreaker$miningToolItem.equals(PickaxeItem.class)) {
             cir.setReturnValue(this.miningSpeed);
         }
     }
 
+    // TODO: need to get the MiningToolItem's actual ItemStack passed from this mixin somehow?
+    //       or maybe mix into whatever checks if a block is in a particular tag... uh oh
     @Inject(method = "isSuitableFor", at = @At("HEAD"), cancellable = true)
-    private void glassbreaker$isSuitableFor(BlockState state, CallbackInfoReturnable<Boolean> cir) {
-        if (glassbreaker$isGlass(state) && glassbreaker$miningToolItem.equals(PickaxeItem.class)) {
+    private void isSuitableFor(BlockState state, CallbackInfoReturnable<Boolean> cir) {
+        if (glassbreaker$isGlass(state) && (glassbreaker$miningToolItem.equals(PickaxeItem.class) || ModCompat.isSuitableTool(this))) {
             cir.setReturnValue(true);
         }
     }
