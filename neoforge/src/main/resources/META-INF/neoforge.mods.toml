@@ -17,7 +17,7 @@ config = "glassbreaker.mixins.json"
 
 [[dependencies.glassbreaker]]
 modId = "minecraft"
-mandatory = true
-versionRange = "[1.20.3,)"
+type = "required"
+versionRange = "[1.21,)"
 ordering = "NONE"
 side = "BOTH"
