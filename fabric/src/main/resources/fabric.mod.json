@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "glassbreaker",
+  "version": "${version}",
+  "name": "Glass Breaker",
+  "description": "Pickaxes break glass faster.",
+  "authors": [
+    "unilock"
+  ],
+  "contact": {
+    "sources": "https://github.com/unilock/GlassBreaker",
+    "issues": "https://github.com/unilock/GlassBreaker/issues"
+  },
+  "license": "MIT",
+  "icon": "icon.png",
+  "environment": "*",
+  "mixins": [
+    "glassbreaker.mixins.json"
+  ],
+  "depends": {
+    "minecraft": ">=1.20.3"
+  }
+}

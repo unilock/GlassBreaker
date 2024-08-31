@@ -1,0 +1,12 @@
+{
+  "required": true,
+  "package": "cc.unilock.glassbreaker.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+    "DiggerItemMixin"
+  ],
+  "client": [],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

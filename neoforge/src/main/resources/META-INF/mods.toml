@@ -1,0 +1,23 @@
+modLoader = "lowcodefml"
+loaderVersion = "[1,)"
+license = "MIT"
+issueTrackerURL = "https://github.com/unilock/GlassBreaker/issues"
+
+[[mods]]
+modId = "glassbreaker"
+version = "${version}"
+displayName = "Glass Breaker"
+displayURL = "https://github.com/unilock/GlassBreaker"
+authors = "unilock"
+description = '''Pickaxes break glass faster.'''
+logoFile = "icon.png"
+
+[[mixins]]
+config = "glassbreaker.mixins.json"
+
+[[dependencies.glassbreaker]]
+modId = "minecraft"
+mandatory = true
+versionRange = "[1.20.3,)"
+ordering = "NONE"
+side = "BOTH"
